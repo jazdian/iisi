@@ -16,19 +16,19 @@ class Routs
     public function RouterOutlet()
     {
         $router = new Router($_SERVER['REQUEST_URI']);
-
+        
         # En estas secciones se inyecta en el home otras páginass segun sus rutas.
 
         $router->add(PATH_FOLD, function () {
             require_once PATH_VIEW . '/web/inicio.php';
         });
 
-        $router->add(PATH_FOLD . '/login', function () {
-            require_once PATH_CLLER . '/login.controller.php';
+        $router->add(PATH_FOLD . '/clientes', function () {
+            require_once PATH_CLLER . '/clientes.controller.php';
         });
 
-        $router->add( PATH_FOLD . '/menu', function () {
-            require_once PATH_CLLER . '/menu.controller.php';
+        $router->add( PATH_FOLD . '/login', function () {
+            require_once PATH_CLLER . '/login.controller.php';
         });
 
         $router->Run();

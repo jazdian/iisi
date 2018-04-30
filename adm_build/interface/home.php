@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <title>Inicio</title>
+   <title>Sistema integral de mantenimiento IISI</title>
+   
+   <link rel="stylesheet" href="assets/css/bootstrap.min.css"/>
+   <link rel="stylesheet" href="assets/css/estilos.css"/>
+   
 </head>
 <body>
 
@@ -9,6 +13,9 @@
 
     <?php // Esta función inyecta la pagina según la ruta...
     echo $rutas->RouterOutlet(); ?>
+
+   <script src="assets/js/jquery.min.js"></script>
+   <script src="assets/js/bootstrap.min.js"></script>
 
 </body>
 </html>
