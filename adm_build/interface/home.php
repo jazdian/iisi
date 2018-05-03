@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html>
-<head>
-   <title>Sistema integral de mantenimiento IISI</title>
-   
-   <link rel="stylesheet" href="assets/css/bootstrap.min.css"/>
-   <link rel="stylesheet" href="assets/css/estilos.css"/>
-   
-</head>
-<body>
+   <head>
 
-<h1>Inicio del sistema</h1>
+      <title>Sistema integral de mantenimiento ISSI</title>
 
-    <?php // Esta función inyecta la pagina según la ruta...
-    echo $rutas->RouterOutlet(); ?>
+      <link rel="stylesheet" href="assets/css/bootstrap.min.css"/>
+      <link rel="stylesheet" href="assets/css/estilos.css"/>
 
-   <script src="assets/js/jquery.min.js"></script>
-   <script src="assets/js/bootstrap.min.js"></script>
+   </head>
+   <body>
 
-</body>
+      <?php require_once PATH_VIEW . '/widgets/navbar.php'; ?>
+      <?php
+         // Esta función inyecta la pagina según la ruta...
+         echo $rutas->RouterOutlet();
+      ?>
+
+      <script src="assets/js/jquery.min.js"></script>
+      <script src="assets/js/bootstrap.min.js"></script>
+
+   </body>
 </html>

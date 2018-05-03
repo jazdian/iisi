@@ -45,7 +45,7 @@ class Router {
 				// break para no seguir dando vueltas
 				// Ya se encontró la ruta correspondiente
 				break;
-			}
+			}         
 		}
 		$this->sendResponse($response);
 	}
@@ -66,8 +66,7 @@ class Router {
 		}
 		else
 		{
-			//header("HTTP/1.0 404 Not Found");
-			//exit('404');
+
 		}
 	}
 	

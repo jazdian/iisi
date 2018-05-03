@@ -20,9 +20,13 @@ class Routs
         # En estas secciones se inyecta en el home otras páginass segun sus rutas.
 
         $router->add(PATH_FOLD, function () {
-            require_once PATH_VIEW . '/web/inicio.php';
+            require_once PATH_CLLER . '/inicio.controller.php';
         });
 
+        $router->add(PATH_FOLD . '/inicio', function () {
+            require_once PATH_CLLER . '/inicio.controller.php';
+        });        
+        
         $router->add(PATH_FOLD . '/login', function () {
             require_once PATH_CLLER . '/login.controller.php';
         });

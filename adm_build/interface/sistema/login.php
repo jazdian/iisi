@@ -12,7 +12,7 @@
 
                 <div class="card text-white bg-primary mb-3" style="max-width: 38rem;">
 
-                    <div class="card-header ">IISI</div>
+                    <div class="card-header ">ISSI</div>
                     <div class="card-body ">
 
                         <h5 class="card-title ">Ingresa tu usuario y contraseña</h5>
@@ -33,14 +33,20 @@
                             </div>
 
                            <hr>
-                           <hr>
-                            <button type="submit" class="btn btn-danger">Submit</button>
+                            <button type="submit" class="btn btn-danger">Entrar al sistema</button>
 
-                        </form>
+                        </form>                        
 
                     </div>
+                    
+                    <?php if($_SESSION['firs_time'] === false): ?>
+                    
+                    <div class="alert alert-danger">Su usuario o contraseña no son correctos</div>
+                    
+                    <?php endif; ?>
+                    
                 </div>
-
+               
             </div>
 
         </div>
