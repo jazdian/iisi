@@ -8,9 +8,14 @@ if(isset($_SESSION['logged']))
    }
    else
    {
-      header("location:login");
-      //require_once PATH_CLLER . '/login.controller.php';      
+      header("location:" . PATH_FOLD . "/login");
+      exit;
    }
+}
+else
+{
+   header("location:" . PATH_FOLD . "/login");
+   exit;   
 }
    
 

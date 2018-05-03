@@ -29,74 +29,43 @@ function CallBacksAjax(pUrl, pType, pData, pDatatype, MyCallBack) {
     });
 }
 
-$(document).ready(function() {
-    CreaComboSemanas();
-    OcultarModulos();
-    $('#mod1').show(500);
-});
+function MostrarMenuOpciones()
+{
+   $('#MenuPrincipal').hide(500, function(){
+      
+      $('#MenuAddMantenimiento').hide(500, function(){
 
-function CreaComboSemanas() {
-
-    var JsonData = { "vars": { "NomFunction": "CreaComboSemanas", "id": 1 } };
-
-    CallBacksAjax("views/soft_resp.php", 'POST', JsonData, 'html', function(ObjectDrop) {
-
-        $("#SecDropDownSemanas").html(ObjectDrop);
-
-    });
+         $('#MenuMasOpciones').show(500);
+         
+      });
+      
+   });
 }
 
-function CreaTablaAsignaciones() {
-    var JsonData = { "vars": { "NomFunction": "CreaTablaAsignaciones", "id_sem": $("#CmbCatSemanas").val() } };
+function MostrarAddMantenimiento()
+{
+   $('#MenuPrincipal').hide(500, function(){
+      
+      $('#MenuMasOpciones').hide(500, function(){
 
-    CallBacksAjax("views/soft_resp.php", "POST", JsonData, "html", function(ObjectTable) {
-
-        $("#TablaAsignaciones").html(ObjectTable);
-        console.log(ObjectTable);
-        $("#TabSemana").DataTable();
-
-    });
+         $('#MenuAddMantenimiento').show(500);
+         
+      });
+      
+   });   
+   
 }
 
-function MostrarModulo(id_li) {
+function MostrarMenu()
+{
+   $('#MenuMasOpciones').hide(500, function(){
+      
+      $('#MenuAddMantenimiento').hide(500, function(){
 
-    OcultarModulos();
-    RemoverClassActiv();
-    $('#mod' + id_li).show(500);
-
-    if (id_li === 2) {
-        CreaTablaAsignaciones();
-    }
-
-    $('#li' + id_li).addClass("active");
-
-}
-
-function OcultarModulos() {
-
-    $('#mod1').hide();
-    $('#mod2').hide();
-    //$('#mod3').hide();
-    //$('#mod4').hide();
-    //$('#mod5').hide();
-    //$('#mod6').hide();
-    //$('#mod7').hide();
-    //$('#mod8').hide();
-    //$('#mod9').hide();
-    //$('#mod10').hide();
-
-}
-
-function RemoverClassActiv() {
-    $('#li1').removeClass("active");
-    $('#li2').removeClass("active");
-    $('#li3').removeClass("active");
-    $('#li4').removeClass("active");
-    $('#li5').removeClass("active");
-    $('#li6').removeClass("active");
-    $('#li7').removeClass("active");
-    $('#li8').removeClass("active");
-    $('#li9').removeClass("active");
-    $('#li10').removeClass("active");
-
+         $('#MenuPrincipal').show(500);
+         
+      });
+      
+   });   
+   
 }
