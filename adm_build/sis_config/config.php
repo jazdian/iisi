@@ -2,21 +2,21 @@
 
 define('PATH_FOLD', '/adm_build');   
    
-define('PATH_ROOT', $_SERVER['DOCUMENT_ROOT'] . '/adm_build');
+define('PATH_ROOT', $_SERVER['DOCUMENT_ROOT'] . PATH_FOLD . '');
 
-define('PATH_CTRLS', $_SERVER['DOCUMENT_ROOT'] . '/adm_build/controls');
+define('PATH_CTRLS', $_SERVER['DOCUMENT_ROOT'] . PATH_FOLD . '/controls');
 
-define('PATH_CLAS', $_SERVER['DOCUMENT_ROOT'] . '/adm_build/sis_class');
+define('PATH_CLAS', $_SERVER['DOCUMENT_ROOT'] . PATH_FOLD . '/sis_class');
 
-define('PATH_CLLER', $_SERVER['DOCUMENT_ROOT'] . '/adm_build/controller');
+define('PATH_CLLER', $_SERVER['DOCUMENT_ROOT'] . PATH_FOLD . '/controller');
 
-define('PATH_MODEL', $_SERVER['DOCUMENT_ROOT'] . '/adm_build/model');
+define('PATH_MODEL', $_SERVER['DOCUMENT_ROOT'] . PATH_FOLD . '/model');
 
-define('PATH_VIEW', $_SERVER['DOCUMENT_ROOT'] . '/adm_build/interface');
+define('PATH_VIEW', $_SERVER['DOCUMENT_ROOT'] . PATH_FOLD . '/interface');
 
-define('PATH_ASET', $_SERVER['DOCUMENT_ROOT'] . '/adm_build/assets');
+define('PATH_ASET', $_SERVER['DOCUMENT_ROOT'] . PATH_FOLD . '/assets');
 
-define('PATH_CONF', $_SERVER['DOCUMENT_ROOT'] . '/adm_build/sis_config');
+define('PATH_CONF', $_SERVER['DOCUMENT_ROOT'] . PATH_FOLD . '/sis_config');
 
 define('HOST', 'localhost');
 

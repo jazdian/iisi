@@ -31,8 +31,8 @@ class Routs
             require_once PATH_CLLER . '/login.controller.php';
         });
 
-        $router->add( PATH_FOLD . '/menu', function () {
-            require_once PATH_CLLER . '/menu.controller.php';
+        $router->add( PATH_FOLD . '/building', function () {
+            require_once PATH_CLLER . '/mantenimiento.controller.php';
         });
 
         $router->Run();
